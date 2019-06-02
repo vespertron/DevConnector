@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
   user: {
-    type: mongoose.Schema.Types.ObjectId
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user'
   },
   company: {
     type: String
@@ -72,7 +73,7 @@ const ProfileSchema = new mongoose.Schema({
       },
       from: {
         type: Date,
-        required: tue
+        required: true
       },
       to: {
         type: Date
